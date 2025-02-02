@@ -1,2 +1,2 @@
 # Догодькина Виктория 210901
-<a href = ""> лаб1</a> <br>
+<br><a href = "https://vviikka.github.io/EVT/laba1/лаб.html"> лаба 1 </a>
