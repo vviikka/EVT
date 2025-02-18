@@ -1,0 +1,131 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: rgb(52, 206, 142);
+  height: 100px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+button {
+  margin: 30px 100px 0px 100px;
+  font-size: 20px;
+  background-color: rgb(0, 229, 255);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  animation: vibrate 10ms infinite;
+}
+
+button:hover {
+  animation: none;
+  background-color: rgb(1, 255, 238);
+}
+
+/* Анимация ссылки */
+a {
+  font-size: 20px;
+  color: rgb(97, 6, 188);
+  text-decoration: none;
+  position: relative;
+  transition: color 1s ease;  
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: rgb(20, 224, 251);
+  transition: width 0.5s ease, left 0.5s ease;
+}
+
+a:hover {
+  color: green;
+}
+
+a:hover::after {
+  width: 100%;
+  left:0;
+}
+
+/* Анимация мячика */
+.ball-container {
+  position: relative;
+  height: 300px;
+  width: 100px;
+  margin: 50px ;
+  overflow: hidden;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(11, 90, 181);
+  border-radius: 50%;
+  position: absolute;
+
+
+  animation: bounce 2s  infinite;
+}
+
+@keyframes bounce {
+  0% {
+      top: 0;
+      transform: scale(1, 1);
+      animation-timing-function: ease-in;
+  }
+  30% {
+      top: 250px;
+      transform: scale(1, 0.8);
+      animation-timing-function: ease-out;
+  }
+  31% {
+      top: 255px;
+      transform: scale(0.8, 1.1);
+      
+  }
+  
+  50% {
+    top: 140px;
+    transform: scale(1, 1);
+    animation-timing-function: ease-out;
+    
+}
+  73% {
+    top: 250px;
+    transform: scale(1, 0.8);
+    animation-timing-function: ease-in;
+  }
+  75% {
+    top: 251px;
+    transform: scale(1, 1);
+}
+  100% {
+      top: 250px;
+      transform: scale(1, 1);
+      animation-timing-function: ease-out;
+  }
+}
