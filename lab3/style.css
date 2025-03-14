@@ -1,0 +1,56 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: rgb(52, 206, 142);
+  height: 100px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+.flex-container {
+  display: flex; 
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+article {
+  flex: 1 1 calc(30% - 20px); /* Настраиваем ширину элементов */
+  box-sizing: border-box; /* Учитываем отступы и границы в ширине */
+  padding: 10px;
+  margin: 10px;
+  background: rgba(16, 233, 215, 0.178);
+}
+
+.group1, .group2{
+  display: flex; /* Добавляем Flexbox для групп */
+  flex-wrap: wrap;
+}
+
+.group1 {
+  flex-direction: column-reverse;
+  box-sizing: border-box;
+  flex: 0 1 33.3%; 
+  order: 2;
+}
+
+.group2 {
+  flex-direction: row;
+  flex: 1 1 50%;
+  order: 1;
+}
+
+.group2 article{
+  flex: 1 1 calc(50% - 20px); /* Устанавливаем ширину блоков на 50% */
+  margin: 10px; /* Отступы между блоками */
+}
