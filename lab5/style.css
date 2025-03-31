@@ -40,10 +40,6 @@ article {
       gap: 5px;
   }
 
-  article {
-      flex: 1 1 auto;
-  }
-
   article:nth-child(1),
   article:nth-child(2) {
       grid-column: span 2; 
