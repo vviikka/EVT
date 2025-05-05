@@ -1,0 +1,113 @@
+.wrapper {
+    max-width: none !important; /* Переопределяем жёсткое ограничение */
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header, .main, .footer {
+    width: 100%;
+    box-sizing: border-box; 
+  }
+
+  body{
+    text-align: center;  
+  }
+  
+  blockquote.blockquote {
+    font-style: italic !important;
+    font-weight: normal !important;
+  }
+
+  p, h1, h2, h3, article, aside:not(.blockquote) { /*спец*/
+    font-style: normal !important; /*спец*/
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(196, 246, 244); 
+    padding: 20px;
+  }
+
+  .footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(196, 246, 244);
+    padding: 20px;
+  }
+
+  a:hover{
+    cursor: default !important;
+  }
+
+  article.article h3 + * + p::first-letter {
+    color: #ff0000;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  /* Нечетные изображения - слева */
+article.article:nth-of-type(1) img,
+article.article:nth-of-type(3) img,
+article.article:nth-of-type(5) img {
+    float: left;
+    margin-right: 15px;
+}
+
+/* Четные изображения - справа */
+article.article:nth-of-type(2) img,
+article.article:nth-of-type(4) img,
+article.article:nth-of-type(6) img {
+    float: right;
+    margin-left: 15px;
+}
+
+
+  article.article img {
+    width: 210px;
+    height: auto !important;
+  }
+
+  article.article.second img {
+    width: 80px !important;
+    height: auto !important;
+  }
+
+  .word {
+    position: sticky;
+    top: 59px; 
+    padding: 10px;
+    margin-right: 10px; 
+    margin-bottom: 10px; 
+    z-index: 1000; 
+    width: fit-content; 
+}
+
+.word.first {
+    background-color: #ff5733; 
+}
+
+.word.second {
+    background-color: #33c1ff;
+    margin-left: 67px;
+}
+
+.word.third {
+    background-color: #85e033;
+    margin-left: 98px;
+}
+
+.word.fourth {
+    background-color: #ffcc33; 
+    margin-left: 153px;
+}
+
+.word.fifth {
+    background-color: #d833ff; 
+    margin-left: 233px;
+}
