@@ -79,6 +79,7 @@ article.article:nth-of-type(6) img {
   }
 
   .word {
+    display: inline-block;
     position: sticky;
     top: 59px; 
     padding: 10px;
